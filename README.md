@@ -1,5 +1,7 @@
 # dhruvbansal_project3
 
+Using this app, you can login as a student or as a teacher. A teacher can create a new offline class according to the current covid protocols asking for vaccination status, and putting stregth as 50%. Student can view all the classes and send a request to teacher for permission to attend the class. When the teacher accepts the request, the class gets addded to the schedule of the student.
+
 Deployed project :- https://dhruv-bansal-project3.herokuapp.com/
 
 Login Page
