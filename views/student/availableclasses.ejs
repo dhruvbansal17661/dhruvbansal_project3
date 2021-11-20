@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="description"
+      content="Orbitor,business,company,agency,modern,bootstrap4,tech,software"
+    />
+    <meta name="author" content="themefisher.com" />
+
+    <title>Novena- Health & Care Medical template</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/Teacher/images/favicon.ico"
+    />
+
+    <!-- bootstrap.min css -->
+    <link
+      rel="stylesheet"
+      href="/Teacher/plugins/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="/Teacher/plugins/icofont/icofont.min.css" />
+    <!-- Slick Slider  CSS -->
+    <link
+      rel="stylesheet"
+      href="/Teacher/plugins/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/Teacher/plugins/slick-carousel/slick/slick-theme.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/Teacher/css/style.css" />
+  </head>
+
+  <body id="top">
+    <header>
+      <nav class="navbar navbar-expand-lg navigation" id="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" class="img-fluid" />
+          </a>
+
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarmain"
+            aria-controls="navbarmain"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="icofont-navigation-menu"></span>
+          </button>
+
+          <div>
+            <h1>Student Dashboard</h1>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarmain">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >SIGNED IN AS :
+                  <span style="font-weight: bold; font-size: large"
+                    ><%= username %></span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Slider Start -->
+    <section class="page-title bg-1">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block text-center">
+              <!-- <span class="text-white">Book your Seat</span> -->
+              <h1 class="text-capitalize mb-5 text-lg">
+                All the Available Classes
+              </h1>
+
+              <!-- <ul class="list-inline breadcumb-nav">
+                  <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                  <li class="list-inline-item"><span class="text-white">/</span></li>
+                  <li class="list-inline-item"><a href="#" class="text-white-50">Book your Seat</a></li>
+                </ul> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <!-- <h1 class="mb-3 mt-3" style="color: #223a66;">Upcoming Classes</h1> -->
+    <section class="features">
+      <div class="container" style="max-width: 1500px">
+        <!-- <h1 class="mb-3 mt-3" style="color: #223a66;">Upcoming Classes</h1> -->
+        <div class="row">
+          <!-- <h1 class="mb-3 mt-3" style="color: #223a66;">Upcoming Classes</h1> -->
+          <div class="col-lg-12">
+            <h1 class="mb-3 mt-3" style="color: #223a66"></h1>
+            <div
+              class="feature-block d-lg-flex"
+              style="display: flex; flex-wrap: wrap"
+            >
+              <%meetings.forEach(function(meeting) { %>
+
+              <div class="feature-item mb-5 mb-lg-0" style="max-width: 300px">
+                <div class="feature-icon mb-4">
+                  <i class="icofont-hat icofont-10x"></i>
+                </div>
+                <!-- <span>24 Hours Service</span> -->
+                <h3 class="mb-3" style="font-size: xx-large">
+                  <%= meeting.topic %>
+                </h3>
+                <h4 class="mb-3">Date : <%= meeting.date %></h4>
+                <h4 class="mb-3">Time : <%= meeting.time %></h4>
+                <h4 class="mb-3">Strength : <%= meeting.strength_allowed %></h4>
+                <h4 class="mb-3"><%= meeting.vaccination_required %></h4>
+                <p class="mb-4"><%= meeting.message %></p>
+                <a
+                  href="/student/availableclasses/<%= meeting._id %>/joinnewclassform"
+                  class="btn btn-main btn-round-full"
+                  >Join this Class</a
+                >
+              </div>
+
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    <!-- Main jQuery -->
+    <script src="/Teacher/plugins/jquery/jquery.js"></script>
+    <!-- Bootstrap 4.3.2 -->
+    <script src="/Teacher/plugins/bootstrap/js/popper.js"></script>
+    <script src="/Teacher/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Teacher/plugins/counterup/jquery.easing.js"></script>
+    <!-- Slick Slider -->
+    <script src="/Teacher/plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="/Teacher/plugins/counterup/jquery.waypoints.min.js"></script>
+
+    <script src="/Teacher/plugins/shuffle/shuffle.min.js"></script>
+    <script src="/Teacher/plugins/counterup/jquery.counterup.min.js"></script>
+    <!-- Google Map -->
+    <script src="/Teacher/plugins/google-map/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+
+    <script src="/Teacher/js/script.js"></script>
+    <script src="/Teacher/js/contact.js"></script>
+  </body>
+</html>
