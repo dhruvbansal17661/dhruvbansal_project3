@@ -4,6 +4,9 @@ Using this app, you can login as a student or as a teacher. A teacher can create
 
 Deployed project :- https://dhruvbansal-scheduler.herokuapp.com/
 
+
+Video Link :- https://www.youtube.com/watch?v=GeSkDJL9KrY&t=115s
+
 Login Page
 ![Screenshot from 2021-11-20 20-51-50](https://user-images.githubusercontent.com/43857178/142731923-c29a2a90-5f02-4472-a23c-a2f48bf2f192.png)
 
